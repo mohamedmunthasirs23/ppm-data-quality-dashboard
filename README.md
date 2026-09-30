@@ -113,13 +113,14 @@ ppm-data-quality-dashboard/
 # 1. Generate mock data
 python generate_data.py
 
-# 2. Run validation & create exception log
+# 2. Run validation & create exception log (also refreshes the dashboard's embedded data)
 python validate_data.py
 
-# 3. Open the dashboard
-#    Serve locally (required for fetch() to load the CSV):
-python -m http.server 8000
-#    Then open http://localhost:8000/dashboard.html
+# 3. Open the dashboard — just double-click dashboard.html, no server required.
+#    (Data is embedded in data.js, so it works fully offline / via file://.
+#     If you prefer serving it — e.g. while actively re-running validate_data.py —
+#     `python -m http.server 8000` and open http://localhost:8000/dashboard.html
+#     also works and will pick up live CSV changes.)
 ```
 
 ---

@@ -76,8 +76,15 @@ Chart.defaults.scale.grid = { color: 'rgba(99,102,241,0.07)' };
 // ── Load & render ──────────────────────────────────────────────────────────
 async function loadData() {
   try {
-    const resp = await fetch('data_quality_exceptions.csv');
-    const text = await resp.text();
+    let text;
+    if (typeof EXCEPTIONS_CSV !== 'undefined') {
+      // Works even when the file is opened directly (file://), no server needed.
+      text = EXCEPTIONS_CSV;
+    } else {
+      // Fallback: fetch fresh data if served over http:// (e.g. after re-running validate_data.py).
+      const resp = await fetch('data_quality_exceptions.csv');
+      text = await resp.text();
+    }
     rawData = parseCSV(text);
 
     document.getElementById('last-scan-badge').textContent =
@@ -156,7 +163,13 @@ function renderIssueTypeChart() {
   const labels = sorted.map(([k]) => k.split(' '));
   const values = sorted.map(([, v]) => v);
   const colors = [CHART_COLORS.rose, CHART_COLORS.indigo, CHART_COLORS.amber, CHART_COLORS.emerald, CHART_COLORS.sky];
-  const bgColors = colors.map(c => c + '55');
+  const bgColors = [
+    'rgba(251,113,133,0.85)',
+    'rgba(99,102,241,0.85)',
+    'rgba(251,191,36,0.85)',
+    'rgba(52,211,153,0.85)',
+    'rgba(56,189,248,0.85)',
+  ];
 
   if (chartIssue) chartIssue.destroy();
 
@@ -169,11 +182,11 @@ function renderIssueTypeChart() {
         data: values,
         backgroundColor: bgColors,
         borderColor: colors,
-        borderWidth: 1.5,
+        borderWidth: 2,
         borderRadius: 8,
         borderSkipped: false,
-        barPercentage: 0.65,
-        categoryPercentage: 0.8,
+        barPercentage: 0.6,
+        categoryPercentage: 0.75,
       }]
     },
     options: {
