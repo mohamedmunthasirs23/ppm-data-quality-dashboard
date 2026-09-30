@@ -1,0 +1,38 @@
+exception_id,project_id,issue_type,severity,detail,status,date_raised,date_resolved,resolution_notes
+EXC1001,PRJ2230,Duplicate Project ID,High,project_id 'PRJ2230' appears multiple times in the master data.,Closed,2026-09-20,2026-09-27,Removed duplicate row; retained original entry with correct budget.
+EXC1002,PRJ2062,Duplicate Project ID,High,project_id 'PRJ2062' appears multiple times in the master data.,In Progress,2026-07-15,,
+EXC1003,PRJ2189,Duplicate Project ID,High,project_id 'PRJ2189' appears multiple times in the master data.,Closed,2026-07-04,2026-07-06,Merged duplicate records after confirming with PMO lead.
+EXC1004,PRJ2261,Duplicate Project ID,High,project_id 'PRJ2261' appears multiple times in the master data.,Open,2026-08-05,,
+EXC1005,PRJ2252,Duplicate Project ID,High,project_id 'PRJ2252' appears multiple times in the master data.,Closed,2026-08-01,2026-08-13,Merged duplicate records after confirming with PMO lead.
+EXC1006,PRJ2257,Duplicate Project ID,High,project_id 'PRJ2257' appears multiple times in the master data.,Open,2026-07-29,,
+EXC1007,PRJ2260,Missing Owner ID,High,owner_id is null for project 'PRJ2260'.,Open,2026-07-18,,
+EXC1008,PRJ2164,Missing Owner ID,High,owner_id is null for project 'PRJ2164'.,Closed,2026-07-14,2026-07-25,Corrected owner_id after confirming with project manager.
+EXC1009,PRJ2037,Missing Owner ID,High,owner_id is null for project 'PRJ2037'.,In Progress,2026-09-25,,
+EXC1010,PRJ2283,Missing Owner ID,High,owner_id is null for project 'PRJ2283'.,Open,2026-09-08,,
+EXC1011,PRJ2133,Missing Owner ID,High,owner_id is null for project 'PRJ2133'.,Closed,2026-07-12,2026-07-24,Updated owner_id based on HR onboarding records.
+EXC1012,PRJ2178,Missing Owner ID,High,owner_id is null for project 'PRJ2178'.,Open,2026-09-14,,
+EXC1013,PRJ2162,Missing Owner ID,High,owner_id is null for project 'PRJ2162'.,Closed,2026-08-24,2026-09-03,Updated owner_id based on HR onboarding records.
+EXC1014,PRJ2138,Missing Owner ID,High,owner_id is null for project 'PRJ2138'.,Open,2026-07-05,,
+EXC1015,PRJ2215,Missing Owner ID,High,owner_id is null for project 'PRJ2215'.,In Progress,2026-07-04,,
+EXC1016,PRJ2190,Missing Owner ID,High,owner_id is null for project 'PRJ2190'.,Closed,2026-07-12,2026-07-21,Corrected owner_id after confirming with project manager.
+EXC1017,PRJ2174,Missing Owner ID,High,owner_id is null for project 'PRJ2174'.,Closed,2026-07-28,2026-08-11,Corrected owner_id after confirming with project manager.
+EXC1018,PRJ2087,Missing Owner ID,High,owner_id is null for project 'PRJ2087'.,Closed,2026-07-30,2026-08-10,Assigned to department head as interim owner pending formal assignment.
+EXC1019,PRJ2192,Missing Budget,Medium,budget is null for project 'PRJ2192'.,Closed,2026-09-03,2026-09-06,Updated budget from approved project charter (v2.1).
+EXC1020,PRJ2075,Missing Budget,Medium,budget is null for project 'PRJ2075'.,In Progress,2026-09-16,,
+EXC1021,PRJ2056,Missing Budget,Medium,budget is null for project 'PRJ2056'.,Closed,2026-07-04,2026-07-15,Updated budget from approved project charter (v2.1).
+EXC1022,PRJ2124,Missing Budget,Medium,budget is null for project 'PRJ2124'.,Open,2026-09-10,,
+EXC1023,PRJ2181,Missing Budget,Medium,budget is null for project 'PRJ2181'.,Closed,2026-07-26,2026-08-06,Updated budget from approved project charter (v2.1).
+EXC1024,PRJ2222,Missing Budget,Medium,budget is null for project 'PRJ2222'.,In Progress,2026-09-22,,
+EXC1025,PRJ2229,Missing Budget,Medium,budget is null for project 'PRJ2229'.,Open,2026-09-28,,
+EXC1026,PRJ2191,Missing Budget,Medium,budget is null for project 'PRJ2191'.,Closed,2026-09-08,2026-09-19,Updated budget from approved project charter (v2.1).
+EXC1027,PRJ2270,Missing Budget,Medium,budget is null for project 'PRJ2270'.,Closed,2026-08-23,2026-08-26,Set budget to $0 — internal project with no direct cost allocation.
+EXC1028,PRJ2219,Invalid Owner Reference,High,owner_id 'EMP9902' in project 'PRJ2219' does not exist in employee_master.,Open,2026-07-29,,
+EXC1029,PRJ2000,Invalid Owner Reference,High,owner_id 'EMP9905' in project 'PRJ2000' does not exist in employee_master.,Closed,2026-08-27,2026-08-31,Corrected owner_id to active employee after verifying org chart.
+EXC1030,PRJ2261,Invalid Owner Reference,High,owner_id 'EMP9903' in project 'PRJ2261' does not exist in employee_master.,Open,2026-09-14,,
+EXC1031,PRJ2250,Invalid Owner Reference,High,owner_id 'EMP9901' in project 'PRJ2250' does not exist in employee_master.,Closed,2026-08-05,2026-08-11,Corrected owner_id to active employee after verifying org chart.
+EXC1032,PRJ2188,Invalid Owner Reference,High,owner_id 'EMP9904' in project 'PRJ2188' does not exist in employee_master.,Closed,2026-07-01,2026-07-12,Fixed typo in employee_id; validated against employee_master.
+EXC1033,PRJ2282,Invalid Date Range,Medium,end_date (2026-02-18) is before start_date (2026-04-15) for project 'PRJ2282'.,Closed,2026-07-21,2026-07-27,Swapped start_date and end_date — confirmed correct dates with PM.
+EXC1034,PRJ2002,Invalid Date Range,Medium,end_date (2026-04-28) is before start_date (2026-05-10) for project 'PRJ2002'.,Closed,2026-09-28,2026-10-08,Updated start_date from project kick-off meeting minutes.
+EXC1035,PRJ2198,Invalid Date Range,Medium,end_date (2026-03-01) is before start_date (2026-04-18) for project 'PRJ2198'.,Closed,2026-08-24,2026-08-31,Corrected end_date based on revised project schedule.
+EXC1036,PRJ2176,Invalid Date Range,Medium,end_date (2025-06-11) is before start_date (2025-07-07) for project 'PRJ2176'.,Closed,2026-08-13,2026-08-16,Corrected end_date based on revised project schedule.
+EXC1037,PRJ2293,Invalid Date Range,Medium,end_date (2025-07-31) is before start_date (2025-09-01) for project 'PRJ2293'.,Closed,2026-08-05,2026-08-18,Corrected end_date based on revised project schedule.
