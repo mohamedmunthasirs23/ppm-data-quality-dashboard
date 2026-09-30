@@ -5,6 +5,14 @@ Generates employee_master.csv and project_master_data.csv with
 deliberately injected data-quality issues for validation testing.
 """
 
+import sys
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta

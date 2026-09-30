@@ -2,6 +2,8 @@
 
 > **Simulates the real-world workflow of a PPM (Project & Portfolio Management) systems-support analyst**: scanning project master data for integrity issues, raising trackable exceptions, resolving them through a support-ticket lifecycle, and monitoring data-quality health via a visual dashboard.
 
+![PPM Data Quality Dashboard](screenshot.png)
+
 ---
 
 ## Why This Project Exists
